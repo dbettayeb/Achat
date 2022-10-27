@@ -32,12 +32,7 @@ public class OperateurServiceImplTest {
 	
 	Operateur op = new Operateur("op" , "lastop" , "f465465df");
 	
-	
-	
-	@Test
-	public List<Operateur> TestretrieveAllOperateurs() {
-		return (List<Operateur>) operateurRepository.findAll();
-	}
+
 
 	@Test
 	public void testRetrieveOp() {

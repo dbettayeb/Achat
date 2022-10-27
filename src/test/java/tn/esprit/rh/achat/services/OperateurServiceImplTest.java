@@ -40,7 +40,7 @@ public class OperateurServiceImplTest {
 	}
 
 	@Test
-	public void testRetrieveUser() {
+	public void testRetrieveOp() {
 	Mockito.when(operateurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(op));
 	Operateur op1 = OperateurService.retrieveOperateur(op.getIdOperateur());
 	Assertions.assertNotNull(op1);

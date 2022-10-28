@@ -1,5 +1,7 @@
 package tn.esprit.rh.achat.services;
 
+import static org.mockito.Mockito.lenient;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -36,7 +38,7 @@ public class OperateurServiceImplTest {
 
 	@Test
 	public void testRetrieveOp() {
-	Mockito.when(operateurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(op));
+	lenient().when(operateurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(op));
 	Operateur op1 = OperateurService.retrieveOperateur(op.getIdOperateur());
 	Assertions.assertNotNull(op1);
 	}

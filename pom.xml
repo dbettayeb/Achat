@@ -38,11 +38,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -79,13 +75,6 @@
 	</dependencies>
 
 
-	<distributionManagement>
-		<repository>
-			<id>deploymentRepo</id>
-			<name>Nexus Repository</name>
-			<url>http://192.168.1.16:8081/repository/maven-snapshots/</url>
-		</repository>
-	</distributionManagement>
 
 	<build>
 		<plugins>

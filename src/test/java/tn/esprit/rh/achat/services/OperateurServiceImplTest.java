@@ -32,13 +32,13 @@ public class OperateurServiceImplTest {
 	OperateurServiceImpl OperateurService;
 
 	
-	Operateur op = new Operateur("op" , "lastop" , "f465465df");
+	Operateur op = new Operateur( 1L,"op" , "lastop" , "f465465df", null );
 	
 
 
 	@Test
 	public void testRetrieveOp() {
-	lenient().when(operateurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(op));
+	Mockito.when(operateurRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(op));
 	Operateur op1 = OperateurService.retrieveOperateur(op.getIdOperateur());
 	Assertions.assertNotNull(op1);
 	}
